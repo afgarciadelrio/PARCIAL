@@ -47,6 +47,21 @@
    * En Von Neumann los datos y las instrucciones comparten la misma memoria; en Harvard están separadas.
    * Von Neumann usa un solo bus; Harvard usa buses independientes.
    * Harvard suele ser más rápida porque puede acceder a datos e instrucciones al mismo tiempo.
+
+ ## ¿Qué son los procesadores tipos RISC y tipo CISC?
+ Son procesadores que utilizan un conjunto pequeño de instrucciones simples. Están diseñados para ejecutar las instrucciones de forma rápida y eficiente.
+
+ ## ¿Qué es ARM (Advanced RISC Machine)?
+ 
+  ### a. Exponer sus características
+  
+  ### b. Exponer sus ventajas
+  
+  ### c. Exponer si es muy usado en la actualidad.
+
+ ## ¿Cuál es la arquitecura de Arduino ? Y ¿qué características tiene?
+
+ ## ¿Cuál es la arquitectura de PIC16F887 y sus principales características?
     
 
     
