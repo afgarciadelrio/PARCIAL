@@ -11,11 +11,11 @@
 
  ## Defina la arquitectura Von Neumann y la Arquitectura de Harvard además: 
  
-  ## a. mencionar sus caracteristica
+  ### a. mencionar sus caracteristica
   
-  ## b. mencionar  sus ventajas
+  ### b. mencionar  sus ventajas
   
-  ## c. mencionar sus diferencias
+  ### c. mencionar sus diferencias
   
  
   ### Von Neumann
