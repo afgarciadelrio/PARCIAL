@@ -9,12 +9,13 @@
   ### Microprocesadores:
   Son circuitos integrados encargados de procesar datos y ejecutar instrucciones. Funcionan como la CPU de un sistema y normalmente necesitan memoria y otros componentes externos para trabajar.
 
- ## * Defina la arquitectura Von Neumann y la Arquitectura de Harvard además:
-  a. mencionar sus caracteristica
+ ## * Defina la arquitectura Von Neumann y la Arquitectura de Harvard además: 
+ 
+  ## a. mencionar sus caracteristica
   
-  b. mencionar  sus ventajas
+  ## b. mencionar  sus ventajas
   
-  c. mencionar sus diferencias
+  ## c. mencionar sus diferencias
   
  
   ### Von Neumann
