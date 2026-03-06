@@ -66,10 +66,10 @@
    * Bajo consumo de energía.
    * Alta eficiencia en procesamiento.
 
-   #### Ventajas
-    * Menor consumo de batería.
-    * Buen rendimiento.
-    * Diseño eficiente para dispositivos pequeños.
+  #### Ventajas
+   * Menor consumo de batería.
+   * Buen rendimiento.
+   * Diseño eficiente para dispositivos pequeños.
 
  ## ¿Cuál es la arquitecura de Arduino ? Y ¿qué características tiene?
   Las placas Arduino utilizan arquitectura Harvard.
