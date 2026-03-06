@@ -61,10 +61,10 @@
 
   ARM es una arquitectura de procesadores basada en el modelo RISC, diseñada para ofrecer buen rendimiento con bajo consumo de energía.
 
-   #### Caractareristicas
-    * Arquitectura RISC.
-    * Bajo consumo de energía.
-    * Alta eficiencia en procesamiento.
+  #### Caractareristicas
+   * Arquitectura RISC.
+   * Bajo consumo de energía.
+   * Alta eficiencia en procesamiento.
 
    #### Ventajas
     * Menor consumo de batería.
