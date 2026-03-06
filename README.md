@@ -105,6 +105,6 @@ c. ¿Cómo reconocería el sistema la velocidad de las personas en el laboratori
 
 d. ¿Cómo haría un despliegue en una plataforma web o móvil?
 
-    
 
-    
+
+
