@@ -98,9 +98,13 @@ El propósito de los estudiantes de ingeniería de telecomunicaciones de compens
 Formule de manera robusta lo siguiente:
 
 a. ¿Cómo plantearía el desarrollo de una base de datos con imágenes de los diferentes elementos de un laboratorio de telecomunicaciones?
+
 b. ¿Cómo crearía un sistema clasificador de elementos con la librería media pipe?
+
 c. ¿Cómo reconocería el sistema la velocidad de las personas en el laboratorio?
+
 d. ¿Cómo haría un despliegue en una plataforma web o móvil?
+
     
 
     
