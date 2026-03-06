@@ -11,8 +11,11 @@
 
  ## *Defina la arquitectura Von Neumann y la Arquitectura de Harvard además:
   a. mencionar sus caracteristica
+  
   b. mencionar  sus ventajas
+  
   c. mencionar sus diferencias
+  
  
   ### Von Neumann
   Es una arquitectura donde la memoria de datos y la memoria de programa están en el mismo espacio de memoria y usan el mismo bus para comunicarse con la CPU.
