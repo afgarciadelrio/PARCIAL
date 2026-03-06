@@ -2,14 +2,14 @@
 
 # 1. Responda las siguientes preguntas:
 
- ## * ¿Qué son los microcontroladores y los microprocesadores?
+ ## ¿Qué son los microcontroladores y los microprocesadores?
   ### Microcontroladores:
   Son dispositivos electrónicos programables que integran en un solo circuito la CPU, memoria y puertos de entrada y salida. Se utilizan para controlar funciones específicas dentro de un sistema electrónico.
 
   ### Microprocesadores:
   Son circuitos integrados encargados de procesar datos y ejecutar instrucciones. Funcionan como la CPU de un sistema y normalmente necesitan memoria y otros componentes externos para trabajar.
 
- ## * Defina la arquitectura Von Neumann y la Arquitectura de Harvard además: 
+ ## Defina la arquitectura Von Neumann y la Arquitectura de Harvard además: 
  
   ## a. mencionar sus caracteristica
   
