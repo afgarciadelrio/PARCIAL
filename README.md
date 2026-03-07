@@ -59,6 +59,8 @@
   
   ### c. Exponer si es muy usado en la actualidad.
 
+  #### ARM
+  
   ARM es una arquitectura de procesadores basada en el modelo RISC, diseñada para ofrecer buen rendimiento con bajo consumo de energía.
 
   #### Caractareristicas
