@@ -105,6 +105,10 @@ c. ¿Cómo reconocería el sistema la velocidad de las personas en el laboratori
 
 d. ¿Cómo haría un despliegue en una plataforma web o móvil?
 
+ 
 
+
+# 3. Crear un algoritmo sencillo que solo me muestre puntos en el pulgar
+<img width="2409" height="957" alt="image" src="https://github.com/user-attachments/assets/97f72df2-7a22-4e78-ad9f-bd16d463669f" />
 
 
