@@ -97,25 +97,25 @@
 El propósito de los estudiantes de ingeniería de telecomunicaciones de compensar es el planteamiento de una plataforma que permita el reconocimiento de las herramientas que existen en un laboratorio y también a las personas que están en el mismo donde se observe si se movilizan a una velocidad prudente o si están generando movimientos muy rápidos por medio de sistemas embebidos
 Formule de manera robusta lo siguiente:
 
-a. ¿Cómo plantearía el desarrollo de una base de datos con imágenes de los diferentes elementos de un laboratorio de telecomunicaciones?
+## a. ¿Cómo plantearía el desarrollo de una base de datos con imágenes de los diferentes elementos de un laboratorio de telecomunicaciones?
 
 Primero se deben tomar muchas fotos de los elementos que hay en el laboratorio, por ejemplo routers, multímetros, cables, protoboards o antenas. Las fotos se pueden tomar desde diferentes ángulos y con distintas posiciones para que el sistema pueda reconocer mejor los objetos.
 Después las imágenes se organizan en carpetas según el objeto. Por ejemplo, una carpeta para routers, otra para cables y otra para multímetros. De esta forma el programa puede aprender a diferenciar cada elemento.
 Esta base de datos de imágenes será la que se utilice para entrenar el sistema de reconocimiento.
 
-b. ¿Cómo crearía un sistema clasificador de elementos con la librería media pipe?
+## b. ¿Cómo crearía un sistema clasificador de elementos con la librería media pipe?
 
 Para crear el clasificador se puede usar MediaPipe junto con Python y la cámara del computador. El programa captura imágenes en tiempo real y analiza lo que aparece en la cámara.
 Luego el sistema compara la imagen con las que están en la base de datos y trata de identificar qué objeto es. Cuando reconoce el objeto, el programa puede mostrar en pantalla el nombre del elemento que detectó.
 De esta forma se podría reconocer automáticamente las herramientas del laboratorio.
 
-c. ¿Cómo reconocería el sistema la velocidad de las personas en el laboratorio?
+## c. ¿Cómo reconocería el sistema la velocidad de las personas en el laboratorio?
 
 Para esto se puede usar MediaPipe Pose, que permite identificar las partes del cuerpo de una persona usando la cámara.
 El sistema analiza cómo cambia la posición de la persona entre un momento y otro. Si el cambio de posición es muy rápido, el sistema puede identificar que la persona se está moviendo rápido o corriendo.
 También se puede usar un sensor de movimiento conectado al PIC16F887 para detectar cuando una persona pasa por una zona específica. Con la información del sensor y de la cámara se puede tener una mejor idea de la velocidad de movimiento.
 
-d. ¿Cómo haría un despliegue en una plataforma web o móvil?
+## d. ¿Cómo haría un despliegue en una plataforma web o móvil?
 
 Para mostrar la información se puede crear una página web o una aplicación sencilla donde se vean los resultados del sistema.
 
