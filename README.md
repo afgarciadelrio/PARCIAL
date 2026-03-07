@@ -130,7 +130,7 @@ De esta forma se podría monitorear lo que pasa en el laboratorio desde un compu
 # 3. Crear un algoritmo sencillo que solo me muestre puntos en el pulgar
 <img width="2409" height="957" alt="image" src="https://github.com/user-attachments/assets/97f72df2-7a22-4e78-ad9f-bd16d463669f" />
 
-## algoritmo base de COOLAB
+## algoritmo base de COLAB
 
 ```# 1. Instalaciones y Descargas
 !pip install -q mediapipe
