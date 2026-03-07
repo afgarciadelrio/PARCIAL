@@ -263,10 +263,6 @@ else:
 
 
 
-
-
-![WIN_20260306_19_38_27_Pro](https://github.com/user-attachments/assets/6e515595-cbde-4e95-8307-2351ce8f57f9)
-
 ### Explicación del código
 
 Para este ejercicio se utilizó Google Colab y el código base de MediaPipe para la detección de manos. A partir de ese código solo se realizaron algunas modificaciones sencillas para adaptarlo a lo que se necesitaba.
