@@ -130,9 +130,74 @@ De esta forma se podría monitorear lo que pasa en el laboratorio desde un compu
 # 3. Crear un algoritmo sencillo que solo me muestre puntos en el pulgar
 <img width="2409" height="957" alt="image" src="https://github.com/user-attachments/assets/97f72df2-7a22-4e78-ad9f-bd16d463669f" />
 
-## algoritmo base
+## algoritmo base de COOLAB
 
-```
+```# 1. Instalaciones y Descargas
+!pip install -q mediapipe
+!wget -q -O hand_landmarker.task https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task
+!wget -q -O image.jpg https://storage.googleapis.com/mediapipe-tasks/hand_landmarker/woman_hands.jpg
+
+# 2. Importaciones
+import cv2
+import numpy as np
+import mediapipe as mp
+from mediapipe.tasks import python
+from mediapipe.tasks.python import vision
+from google.colab.patches import cv2_imshow
+
+# 3. Función de dibujo manual (Sin usar mp.solutions)
+def draw_landmarks_manual(rgb_image, detection_result):
+    annotated_image = np.copy(rgb_image)
+    h, w, _ = annotated_image.shape
+
+    # Definir conexiones de la mano (basado en la documentación oficial)
+    # Cada tupla es (inicio, fin) de un hueso
+    CONNECTIONS = [
+        (0, 1), (1, 2), (2, 3), (3, 4),           # Pulgar
+        (0, 5), (5, 6), (6, 7), (7, 8),           # Índice
+        (9, 10), (10, 11), (11, 12),              # Medio
+        (13, 14), (14, 15), (15, 16),             # Anular
+        (0, 17), (17, 18), (18, 19), (19, 20),    # Meñique
+        (5, 9), (9, 13), (13, 17)                 # Palma
+    ]
+
+    for hand_landmarks in detection_result.hand_landmarks:
+        # 1. Dibujar las líneas (conexiones)
+        for connection in CONNECTIONS:
+            start_idx = connection[0]
+            end_idx = connection[1]
+            
+            start_point = (int(hand_landmarks[start_idx].x * w), int(hand_landmarks[start_idx].y * h))
+            end_point = (int(hand_landmarks[end_idx].x * w), int(hand_landmarks[end_idx].y * h))
+            
+            cv2.line(annotated_image, start_point, end_point, (255, 255, 255), 2)
+
+        # 2. Dibujar los puntos (landmarks)
+        for landmark in hand_landmarks:
+            cx, cy = int(landmark.x * w), int(landmark.y * h)
+            cv2.circle(annotated_image, (cx, cy), 5, (0, 0, 255), -1)
+
+    return annotated_image
+
+# 4. Ejecución Principal
+# Configurar el detector
+base_options = python.BaseOptions(model_asset_path='hand_landmarker.task')
+options = vision.HandLandmarkerOptions(base_options=base_options, num_hands=2)
+detector = vision.HandLandmarker.create_from_options(options)
+
+# Cargar imagen
+image = mp.Image.create_from_file("image.jpg")
+
+# Detectar
+detection_result = detector.detect(image)
+
+# Dibujar y mostrar
+if detection_result.hand_landmarks:
+    annotated_image = draw_landmarks_manual(image.numpy_view(), detection_result)
+    # Convertir de RGB (MediaPipe) a BGR (OpenCV) para mostrar correctamente
+    cv2_imshow(cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
+else:
+    print("No se detectaron manos en la imagen.")```
 
 
 
