@@ -264,3 +264,21 @@ else:
 
 
 
+
+![WIN_20260306_19_38_27_Pro](https://github.com/user-attachments/assets/6e515595-cbde-4e95-8307-2351ce8f57f9)
+
+### Explicación del código
+
+Para este ejercicio se utilizó Google Colab y el código base de MediaPipe para la detección de manos. A partir de ese código solo se realizaron algunas modificaciones sencillas para adaptarlo a lo que se necesitaba.
+
+Primero se ejecuta la parte del código que instala MediaPipe y descarga el modelo que permite detectar los puntos de la mano en una imagen.
+
+Luego se modificó la parte donde se carga la imagen. En el código original la imagen se descargaba de internet, pero en este caso se agregó files.upload() para poder subir una imagen desde el computador y analizarla en Colab.
+
+Finalmente se modificó la función que dibuja los puntos. El código original mostraba todos los puntos de la mano, pero se cambiaron para que solo dibuje los puntos 1, 2, 3 y 4, que corresponden al pulgar.
+
+De esta forma el algoritmo analiza la imagen y muestra únicamente los puntos del pulgar detectados.
+
+
+<img width="1155" height="645" alt="Captura de pantalla 2026-03-06 194809" src="https://github.com/user-attachments/assets/b5dd4795-dd69-4a0e-8303-846bb8427852" />
+
