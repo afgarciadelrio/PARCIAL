@@ -197,7 +197,70 @@ if detection_result.hand_landmarks:
     # Convertir de RGB (MediaPipe) a BGR (OpenCV) para mostrar correctamente
     cv2_imshow(cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
 else:
-    print("No se detectaron manos en la imagen.")```
+    print("No se detectaron manos en la imagen.")
+```
+
+## Codigo modificado:
+
+```
+# 1. Instalaciones y Descargas
+!pip install -q mediapipe
+!wget -q -O hand_landmarker.task https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task
+
+# 2. Importaciones
+import cv2
+import numpy as np
+import mediapipe as mp
+from mediapipe.tasks import python
+from mediapipe.tasks.python import vision
+from google.colab.patches import cv2_imshow
+from google.colab import files
+
+# 3. Subir imagen desde tu PC
+uploaded = files.upload()
+
+# Obtener el nombre del archivo subido
+image_path = list(uploaded.keys())[0]
+
+# 4. Función para dibujar SOLO los puntos del pulgar
+def draw_thumb_points(rgb_image, detection_result):
+    annotated_image = np.copy(rgb_image)
+    h, w, _ = annotated_image.shape
+
+    # Índices del pulgar en MediaPipe
+    THUMB_POINTS = [1, 2, 3, 4]
+
+    for hand_landmarks in detection_result.hand_landmarks:
+        for idx in THUMB_POINTS:
+            landmark = hand_landmarks[idx]
+
+            cx = int(landmark.x * w)
+            cy = int(landmark.y * h)
+
+            cv2.circle(annotated_image, (cx, cy), 8, (0, 0, 255), -1)
+
+    return annotated_image
+
+
+# 5. Configurar detector
+base_options = python.BaseOptions(model_asset_path='hand_landmarker.task')
+options = vision.HandLandmarkerOptions(base_options=base_options, num_hands=2)
+detector = vision.HandLandmarker.create_from_options(options)
+
+# 6. Cargar imagen subida
+image = mp.Image.create_from_file(image_path)
+
+# 7. Detectar mano
+detection_result = detector.detect(image)
+
+# 8. Mostrar resultado
+if detection_result.hand_landmarks:
+    annotated_image = draw_thumb_points(image.numpy_view(), detection_result)
+    cv2_imshow(cv2.cvtColor(annotated_image, cv2.COLOR_RGB2BGR))
+else:
+    print("No se detectaron manos en la imagen.")
+```
+
 
 
 
