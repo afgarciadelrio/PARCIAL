@@ -202,6 +202,10 @@ else:
     print("No se detectaron manos en la imagen.")
 ```
 
+
+<img width="1155" height="645" alt="Captura de pantalla 2026-03-06 194809" src="https://github.com/user-attachments/assets/b5dd4795-dd69-4a0e-8303-846bb8427852" />
+
+
 ## Codigo modificado:
 
 ```
@@ -278,5 +282,4 @@ Finalmente se modificó la función que dibuja los puntos. El código original m
 De esta forma el algoritmo analiza la imagen y muestra únicamente los puntos del pulgar detectados.
 
 
-<img width="1155" height="645" alt="Captura de pantalla 2026-03-06 194809" src="https://github.com/user-attachments/assets/b5dd4795-dd69-4a0e-8303-846bb8427852" />
 
