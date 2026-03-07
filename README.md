@@ -118,9 +118,7 @@ También se puede usar un sensor de movimiento conectado al PIC16F887 para detec
 ## d. ¿Cómo haría un despliegue en una plataforma web o móvil?
 
 Para mostrar la información se puede crear una página web o una aplicación sencilla donde se vean los resultados del sistema.
-
 El programa que procesa la cámara enviaría la información a la plataforma, por ejemplo mostrando qué objeto fue detectado o si una persona se está moviendo muy rápido.
-
 De esta forma se podría monitorear lo que pasa en el laboratorio desde un computador o un celular.
 
 
